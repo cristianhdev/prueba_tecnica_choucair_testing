@@ -1,6 +1,23 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+}
+
 plugins {
     id 'java'
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '4.2.34'
 }
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+defaultTasks 'clean', 'test', 'aggregate'
 
 group = 'com.tricentis.demowebshop'
 version = '1.0-SNAPSHOT'
@@ -9,9 +26,27 @@ repositories {
     mavenCentral()
 }
 
+ext {
+    serenityVersion = '4.2.34'
+    cucumberVersion = '7.18.1'
+}
+
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    // Serenity Core
+    implementation "net.serenity-bdd:serenity-core:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-junit:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-ensure:$serenityVersion"
+
+    // Serenity + Cucumber
+    implementation "net.serenity-bdd:serenity-cucumber:$serenityVersion"
+
+    // Cucumber
+    implementation "io.cucumber:cucumber-java:$cucumberVersion"
+    implementation "io.cucumber:cucumber-junit:$cucumberVersion"
 }
 
 test {
