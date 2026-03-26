@@ -8,7 +8,7 @@ public class RegisterPageUI {
     /* Localizadores Pagina  Registro*/
 
     //link: Registrar
-    //Locator://a[contains(text(),"Register") and @href="/register"]
+    //a[contains(text(),"Register") and @href="/register"]
     public static final Target LNK_REGISTRO = Target.the("Link registro").located(By.xpath("//a[contains(text(),'Register') or @href='/register']"));
 
     //Radio Button: Genero
@@ -39,7 +39,9 @@ public class RegisterPageUI {
     //input[@id='register-button' and @type="submit"]
     public static final Target BTN_REGISTRAR = Target.the("Boton confirmar registro").located(By.xpath("//input[@id='register-button' and @type='submit']"));
 
-    //Texto validacion registgro
+    //Texto validacion registro
     //div[@class="result"]
     public static final Target LBL_REGISTRAR_VALIDACION = Target.the("Label confirmar registro exitoso").located(By.xpath("//div[@class='result']"));
+
+
 }

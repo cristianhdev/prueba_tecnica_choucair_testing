@@ -10,8 +10,12 @@ Característica: Login Usuario
     para ver la informacion de mi cuenta
     y realizar compras de productos
     """
-  @LoginUsurio
-  Escenario: Login usuario exitoso.
+  @LoginUsuario
+  Esquema del escenario: Login usuario exitoso.
     Dado que el usuario se encuentra en la página del login
-    Cuando ingresa las credenciales validas
+    Cuando ingresa las credenciales validas "<email>" y "<password>"
     Entonces se debe acceder correctamente a su cuenta
+
+    Ejemplos:
+      | email                  | password |
+      | pruebaqa2016@gmail.com | $246810$ |
