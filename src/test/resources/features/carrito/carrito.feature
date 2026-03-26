@@ -12,12 +12,15 @@ Característica: Carrito de compra
 
     """
 
-  Antecedentes: Login usuario exitoso.
+  Antecedentes:Login usuario exitoso.
     Dado que el usuario se encuentra en la página del login
-    Cuando ingresa las credenciales validas "<email>" y "<password>"
+    Cuando ingrese las credenciales validas
+      | email                  | password |
+      | pruebaqa2016@gmail.com | $246810$ |
+
+
 
   @CarritoCompras
   Escenario: Agregar productos al carrito
-    Dado que el usuario se encuentra en la página de productos
     Cuando selecciona un producto y lo agregue al carrito
     Entonces  el producto debe agregarse correctamente al carrito

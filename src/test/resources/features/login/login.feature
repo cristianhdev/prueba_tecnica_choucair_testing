@@ -11,11 +11,10 @@ Característica: Login Usuario
     y realizar compras de productos
     """
   @LoginUsuario
-  Esquema del escenario: Login usuario exitoso.
+  Escenario: Login usuario exitoso.
     Dado que el usuario se encuentra en la página del login
-    Cuando ingresa las credenciales validas "<email>" y "<password>"
-    Entonces se debe acceder correctamente a su cuenta
-
-    Ejemplos:
+    Cuando ingrese las credenciales validas
       | email                  | password |
       | pruebaqa2016@gmail.com | $246810$ |
+    Entonces se debe acceder correctamente a su cuenta
+

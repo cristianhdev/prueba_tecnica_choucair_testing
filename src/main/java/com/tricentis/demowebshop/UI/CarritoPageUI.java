@@ -20,4 +20,8 @@ public class CarritoPageUI {
     //Button: agregar al carrito
     //input[@type="button" and contains(@id,"add-to-cart-button")]
     public static final Target BTN_AGREGAR_CARRITO = Target.the("Boton agregar al carrito").located(By.xpath("//input[@type='button' and contains(@id,'add-to-cart-button')]"));
+
+    //Button: carrito compra
+    //a[contains(text(),"Shopping cart") and @href="/cart"]
+    public static final Target BTN_CARRITO_COMPRA = Target.the("Boton carito de compra").located(By.xpath("//a[contains(text(),'Shopping cart') and @href='/cart']"));
 }

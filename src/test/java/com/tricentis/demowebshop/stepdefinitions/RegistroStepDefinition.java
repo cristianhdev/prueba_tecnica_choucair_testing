@@ -30,6 +30,7 @@ public class RegistroStepDefinition {
     @Before
     public void setup(){
         usuario =  Actor.named("usuario").can(BrowseTheWeb.with(driver));
+
     }
 
 
