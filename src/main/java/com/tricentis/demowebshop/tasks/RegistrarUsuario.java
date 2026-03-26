@@ -16,19 +16,19 @@ public class RegistrarUsuario implements Task {
 
     private Usuario usuario;
 
-    static ArrayList<Map<String, String>> datos;
+    static Map<String, String> datos;
 
-    public RegistrarUsuario() {
-        /*try {
-            this.datos = (ArrayList<Map<String, String>>) this.getData();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    public RegistrarUsuario(Map<String, String>  datosUsuario) {
+        this.datos = datosUsuario;
+
         this.usuario = new Usuario();
-        this.usuario.setPrimerNombre(this.datos.get(0).get("primerNombre"));*/
-    }
-    
 
+        this.usuario.setPrimerNombre(this.datos.get("primerNombre"));
+        this.usuario.setSegundoNombre(this.datos.get("segundoNombre"));
+        this.usuario.setEmail(this.datos.get("email"));
+        this.usuario.setPassword(this.datos.get("password"));
+
+    }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
@@ -36,11 +36,11 @@ public class RegistrarUsuario implements Task {
             actor.attemptsTo(
                     ClickElemento.onElemento(LNK_REGISTRO),
                     ClickElemento.onElemento(RBTN_GENERO),
-                    EnterElemento.onCampo(INPUT_TEXT_PRIMER_NOMBRE,"Cristian"),
-                    EnterElemento.onCampo(INPUT_TEXT_SEGUNDO_NOMBRE,"Hernandez"),
-                    EnterElemento.onCampo(INPUT_TEXT_EMAIL,"text29QA@hotmail.com"),
-                    EnterElemento.onCampo(INPUT_TEXT_PASSWORD,"$12346%"),
-                    EnterElemento.onCampo(INPUT_TEXT_CONFIRMAR_PASSWORD,"$12346%"),
+                    EnterElemento.onCampo(INPUT_TEXT_PRIMER_NOMBRE,this.usuario.getPrimerNombre()),
+                    EnterElemento.onCampo(INPUT_TEXT_SEGUNDO_NOMBRE,this.usuario.getSegundoNombre()),
+                    EnterElemento.onCampo(INPUT_TEXT_EMAIL,this.usuario.getEmail()),
+                    EnterElemento.onCampo(INPUT_TEXT_PASSWORD,this.usuario.getPassword()),
+                    EnterElemento.onCampo(INPUT_TEXT_CONFIRMAR_PASSWORD,this.usuario.getPassword()),
                     ClickElemento.onElemento(BTN_REGISTRAR)
             );
         }catch (Exception e){
@@ -49,7 +49,7 @@ public class RegistrarUsuario implements Task {
 
     }
 
-    public static RegistrarUsuario onFormularioRegistro(){
-        return Instrumented.instanceOf(RegistrarUsuario.class).newInstance();
+    public static RegistrarUsuario onFormularioRegistro(Map<String, String> datos){
+        return Instrumented.instanceOf(RegistrarUsuario.class).withProperties(datos);
     }
 }

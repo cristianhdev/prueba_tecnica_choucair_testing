@@ -11,8 +11,11 @@
     para crear mi cuenta en el sistema
 
     """
-  @RegistroUsurio
-  Escenario: Registro usuario exitoso.
+  @RegistroUsuario
+ Escenario: Registro usuario exitoso.
     Dado que el usuario se encuentra en la página de registro
     Cuando ingresa la información personal y sus credenciales de usuario
+      | primerNombre | segundoNombre | email                | password | confirm |
+      | pedro        | sanchez       | testqa2028@gmail.com | $1234%   | $1234%  |
     Entonces se debe visualizar el mensaje de confirmación
+
