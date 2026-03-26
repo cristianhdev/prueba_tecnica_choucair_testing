@@ -7,7 +7,7 @@ Característica: Carrito de compra
 
     HU 003:
     Como usuario registrado en la pagina
-    quiero ingresar a la pagina, seleccionar y agregar mis productos al carrito
+    quiero ingresar, seleccionar y agregar mis productos al carrito
     para posteriormente realizar la compra
 
     """
