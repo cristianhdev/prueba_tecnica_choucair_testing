@@ -2,7 +2,6 @@ package com.tricentis.demowebshop.questions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import net.serenitybdd.screenplay.targets.Target;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static com.tricentis.demowebshop.UI.LoginPageUI.LBL_EMAIL_VALIDACION;

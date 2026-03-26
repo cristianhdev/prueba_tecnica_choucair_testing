@@ -8,27 +8,30 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
-
-public class ClickElemento implements Interaction {
+public class SelecionOpcion implements Interaction {
 
     private final Target elemento;
+    private final String opcion;
 
-    public ClickElemento(Target elemento) {
+    public SelecionOpcion(Target elemento, String opcion) {
         this.elemento = elemento;
+        this.opcion = opcion;
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        try {
+
+        try{
             WaitUntil.the(this.elemento,isVisible()).forNoMoreThan(5).seconds();
-            this.elemento.resolveFor(actor).click();
+            elemento.resolveFor(actor).selectByValue(this.opcion);
         }catch (Exception e){
             System.out.println(e.getStackTrace());
         }
 
     }
 
-    public static ClickElemento onElemento(Target elemento){
-        return Tasks.instrumented(ClickElemento.class,elemento);
+    public static SelecionOpcion onOpcion(Target elemento,String opcion){
+        return Tasks.instrumented(SelecionOpcion.class,elemento,opcion);
     }
+
 }

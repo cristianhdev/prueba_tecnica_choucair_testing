@@ -3,7 +3,6 @@ package com.tricentis.demowebshop.stepdefinitions;
 import com.tricentis.demowebshop.questions.ValidarTexto;
 import com.tricentis.demowebshop.tasks.AbrirNavegador;
 import com.tricentis.demowebshop.tasks.RegistrarUsuario;
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.Before;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;

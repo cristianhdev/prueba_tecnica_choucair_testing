@@ -23,5 +23,21 @@ public class CarritoPageUI {
 
     //Button: carrito compra
     //a[contains(text(),"Shopping cart") and @href="/cart"]
-    public static final Target BTN_CARRITO_COMPRA = Target.the("Boton carito de compra").located(By.xpath("//a[contains(text(),'Shopping cart') and @href='/cart']"));
+    public static final Target BTN_CARRITO_COMPRA = Target.the("Boton carito de compra").located(By.xpath("//a[contains(text(),'Shopping cart') and @href='/cart']"));//Button: carrito compra
+
+    //Button: seleccion ciudad
+    //select[@id='CountryId']
+    public static final Target SEL_OPCION_CIUDAD= Target.the("Seleccion ciudad").located(By.xpath("//select[@id='CountryId']"));
+
+    //Radio: terminos del servicio
+    //input[@id='termsofservice']
+    public static final Target RBTN_OPCION_SERVCIO_TERMINOS= Target.the("Radio button terminos y servicio").located(By.xpath("//input[@id='termsofservice']"));
+
+    //Botton: Chekout
+    //button[@id='checkout']
+    public static final Target BTN_CHEKOUT= Target.the("Boton Chekout").located(By.xpath(" //button[@id='checkout']"));
+
+    //Texto validacion pagina checkout
+    //h1[contains(text(),"Checkout")]
+    public static final Target LBL_PAGINA_CHEKOUT = Target.the("Label confirmar pagina checkout").located(By.xpath("//h1[contains(text(),'Checkout')]"));
 }

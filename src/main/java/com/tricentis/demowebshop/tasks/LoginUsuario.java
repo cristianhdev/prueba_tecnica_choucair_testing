@@ -2,14 +2,14 @@ package com.tricentis.demowebshop.tasks;
 
 import com.tricentis.demowebshop.interactions.ClickElemento;
 import com.tricentis.demowebshop.interactions.EnterElemento;
-import com.tricentis.demowebshop.models.Usuario;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 
 import static com.tricentis.demowebshop.UI.LoginPageUI.BTN_LOGIN;
 import static com.tricentis.demowebshop.UI.LoginPageUI.LNK_LOG_IN;
-import static com.tricentis.demowebshop.UI.RegisterPageUI.*;
+import static com.tricentis.demowebshop.UI.RegisterPageUI.INPUT_TEXT_EMAIL;
+import static com.tricentis.demowebshop.UI.RegisterPageUI.INPUT_TEXT_PASSWORD;
 
 public class LoginUsuario implements Task {
 

@@ -15,7 +15,9 @@ public class CarritoUsuario implements Task {
                 ClickElemento.onElemento(BTN_OPCION_CATEGORIA),
                 ClickElemento.onElemento(OPCION_PRODUCTOS_CATEGORIA),
                 ClickElemento.onElemento(BTN_AGREGAR_CARRITO),
-                ClickElemento.onElemento(BTN_CARRITO_COMPRA)
+                ClickElemento.onElemento(BTN_CARRITO_COMPRA),
+                ClickElemento.onElemento(RBTN_OPCION_SERVCIO_TERMINOS),
+                ClickElemento.onElemento(BTN_CHEKOUT)
         );
     }
 
