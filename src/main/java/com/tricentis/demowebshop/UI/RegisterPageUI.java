@@ -8,7 +8,7 @@ public class RegisterPageUI {
     /* Localizadores Pagina  Registro*/
 
     //link: Registrar
-    //a[contains(text(),"Register") and @href="/register"]
+    //Locator://a[contains(text(),"Register") and @href="/register"]
     public static final Target LNK_REGISTRO = Target.the("Link registro").located(By.xpath("//a[contains(text(),'Register') or @href='/register']"));
 
     //Radio Button: Genero

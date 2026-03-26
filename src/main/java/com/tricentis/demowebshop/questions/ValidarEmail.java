@@ -13,13 +13,18 @@ public class ValidarEmail implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor) {
 
-        //traemos el email del usuario log in
-        String email = actor.recall("email");
-        //esperamos que el login se complete
-        WaitUntil.the(LBL_EMAIL_VALIDACION,isVisible()).forNoMoreThan(5).seconds();
-        String textoUI = LBL_EMAIL_VALIDACION.of(email).resolveFor(actor).getText();
+        try {
+            //traemos el email del usuario log in
+            String email = actor.recall("email");
+            //esperamos que el login se complete
+            WaitUntil.the(LBL_EMAIL_VALIDACION,isVisible()).forNoMoreThan(5).seconds();
+            String textoUI = LBL_EMAIL_VALIDACION.of(email).resolveFor(actor).getText();
 
-        return textoUI.contains(email);
+            return textoUI.contains(email);
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
+
     }
 
     public static ValidarEmail onValidar(){

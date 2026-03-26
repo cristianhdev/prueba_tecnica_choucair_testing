@@ -43,8 +43,8 @@ public class LoginStepDefinition {
     @Entonces("se debe acceder correctamente a su cuenta")
     public void seDebeAccederCorrectamenteASuCuenta() {
         usuario_registrado.should(
-                seeThat(ValidarEmail.onValidar(), equalTo(true)),
-                seeThat(ValidarTexto.onValidar(LBL_LOGIN_VALIDACION), equalTo(mensajeValidacionLoginExitoso))
+                seeThat("Validando correo usuario logueado",ValidarEmail.onValidar(), equalTo(true)),
+                seeThat("Validar titulo pagina login usuario registrado",ValidarTexto.onValidar(LBL_LOGIN_VALIDACION), equalTo(mensajeValidacionLoginExitoso))
         );
     }
 }

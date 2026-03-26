@@ -53,7 +53,7 @@ public class RegistroStepDefinition {
     @Entonces("se debe visualizar el mensaje de confirmación")
     public void seDebeVisualizarElMensajeDeConfirmación() {
         usuario.should(
-                seeThat(ValidarTexto.onValidar(LBL_REGISTRAR_VALIDACION), equalTo(mensajeValidacionRegistroUsuario))
+                seeThat("Validar mensaje de confirmación registro exitoso",ValidarTexto.onValidar(LBL_REGISTRAR_VALIDACION), equalTo(mensajeValidacionRegistroUsuario))
         );
     }
 

@@ -16,7 +16,12 @@ public class ValidarTexto implements Question<String> {
 
     @Override
     public String answeredBy(Actor actor) {
-        return Text.of(this.elemento).answeredBy(actor);
+        try{
+            return Text.of(this.elemento).answeredBy(actor);
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
+
     }
 
     public static ValidarTexto onValidar(Target elemento){
