@@ -23,7 +23,7 @@ public class SelecionOpcion implements Interaction {
 
         try{
             WaitUntil.the(this.elemento,isVisible()).forNoMoreThan(5).seconds();
-            elemento.resolveFor(actor).selectByValue(this.opcion);
+            elemento.resolveFor(actor).selectByVisibleText(this.opcion);
         }catch (Exception e){
             System.out.println(e.getStackTrace());
         }

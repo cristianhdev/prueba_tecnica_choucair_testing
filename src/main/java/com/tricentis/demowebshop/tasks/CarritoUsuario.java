@@ -10,15 +10,20 @@ import static com.tricentis.demowebshop.UI.CarritoPageUI.*;
 public class CarritoUsuario implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(
-                ClickElemento.onElemento(LNK_CATEGORIAS),
-                ClickElemento.onElemento(BTN_OPCION_CATEGORIA),
-                ClickElemento.onElemento(OPCION_PRODUCTOS_CATEGORIA),
-                ClickElemento.onElemento(BTN_AGREGAR_CARRITO),
-                ClickElemento.onElemento(BTN_CARRITO_COMPRA),
-                ClickElemento.onElemento(RBTN_OPCION_SERVCIO_TERMINOS),
-                ClickElemento.onElemento(BTN_CHEKOUT)
-        );
+        try {
+            actor.attemptsTo(
+                    ClickElemento.onElemento(LNK_CATEGORIAS),
+                    ClickElemento.onElemento(BTN_OPCION_CATEGORIA),
+                    ClickElemento.onElemento(OPCION_PRODUCTOS_CATEGORIA),
+                    ClickElemento.onElemento(BTN_AGREGAR_CARRITO),
+                    ClickElemento.onElemento(BTN_CARRITO_COMPRA),
+                    ClickElemento.onElemento(RBTN_OPCION_SERVCIO_TERMINOS),
+                    ClickElemento.onElemento(BTN_CHEKOUT)
+            );
+        }
+        catch (Exception e) {
+                throw new RuntimeException(e);
+        }
     }
 
     public static CarritoUsuario onAgregarProductoCarrito(){

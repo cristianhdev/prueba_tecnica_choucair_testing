@@ -21,7 +21,7 @@ public class ValidarElemento implements Question<Boolean> {
         return target.isVisibleFor(actor);
     }
 
-    public static ValidarElemento isPresent (Target target) {
+    public static ValidarElemento isPresente (Target target) {
         return new ValidarElemento(target);
     }
 }

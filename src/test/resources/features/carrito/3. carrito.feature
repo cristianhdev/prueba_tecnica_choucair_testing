@@ -12,14 +12,11 @@ Característica: Carrito de compra
 
     """
 
-  Antecedentes:Login usuario exitoso.
-    Dado que el usuario se encuentra en la página del login
-    Cuando ingrese las credenciales validas
-      | email                | password |
-      | testqa2031@gmail.com | $1234%   |
-
 
   @CarritoCompras
   Escenario: Agregar productos al carrito
+    Dado que el usuario se encuentra autenticado
+      | email                | password |
+      | testqa2031@gmail.com | $1234%   |
     Cuando selecciona un producto y lo agregue al carrito
     Entonces  el producto debe agregarse correctamente al carrito

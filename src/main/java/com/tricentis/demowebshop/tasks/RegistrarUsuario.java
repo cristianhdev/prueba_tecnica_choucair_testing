@@ -19,14 +19,14 @@ public class RegistrarUsuario implements Task {
     static Map<String, String> datos;
 
     public RegistrarUsuario(Map<String, String>  datosUsuario) {
-        this.datos = datosUsuario;
+        datos = datosUsuario;
 
         this.usuario = new Usuario();
 
-        this.usuario.setPrimerNombre(this.datos.get("primerNombre"));
-        this.usuario.setSegundoNombre(this.datos.get("segundoNombre"));
-        this.usuario.setEmail(this.datos.get("email"));
-        this.usuario.setPassword(this.datos.get("password"));
+        this.usuario.setPrimerNombre(datos.get("primerNombre"));
+        this.usuario.setSegundoNombre(datos.get("segundoNombre"));
+        this.usuario.setEmail(datos.get("email"));
+        this.usuario.setPassword(datos.get("password"));
 
     }
 

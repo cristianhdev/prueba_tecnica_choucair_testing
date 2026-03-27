@@ -11,11 +11,11 @@ public class LoginPageUI {
 
     //Input text: Email
     //input[@id='Email']
-    public static final Target INPUT_TEXT_EMAIL = Target.the("Input text email").locatedBy("//input[@id='Email']");
+    public static final Target INPUT_TEXT_EMAIL = Target.the("Input texto email").locatedBy("//input[@id='Email']");
 
     //Input text: Password
     //input[@id='Password']
-    public static final Target INPUT_TEXT_PASSWORD = Target.the("Input text password").locatedBy("//input[@id='Password']");
+    public static final Target INPUT_TEXT_PASSWORD = Target.the("Input texto password").locatedBy("//input[@id='Password']");
 
     //Boton log In:
     //input[@type="submit" and @value="Log in"]

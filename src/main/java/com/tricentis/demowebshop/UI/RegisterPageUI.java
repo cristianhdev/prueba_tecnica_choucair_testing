@@ -17,23 +17,23 @@ public class RegisterPageUI {
 
     //Input text: Primer Nombre
     //input[@id='FirstName']
-    public static final Target INPUT_TEXT_PRIMER_NOMBRE = Target.the("Input text primer nombre").locatedBy("//input[@id='FirstName']");
+    public static final Target INPUT_TEXT_PRIMER_NOMBRE = Target.the("Input texto primer nombre").locatedBy("//input[@id='FirstName']");
 
     //Input text: Segundo Nombre
     //input[@id='LastName']
-    public static final Target INPUT_TEXT_SEGUNDO_NOMBRE = Target.the("Input text segundo nombre").locatedBy("//input[@id='LastName']");
+    public static final Target INPUT_TEXT_SEGUNDO_NOMBRE = Target.the("Input texto segundo nombre").locatedBy("//input[@id='LastName']");
 
     //Input text: Email
     //input[@id='Email']
-    public static final Target INPUT_TEXT_EMAIL = Target.the("Input text email").locatedBy("//input[@id='Email']");
+    public static final Target INPUT_TEXT_EMAIL = Target.the("Input texto email").locatedBy("//input[@id='Email']");
 
     //Input text: Password
     //input[@id='Password']
-    public static final Target INPUT_TEXT_PASSWORD = Target.the("Input text password").locatedBy("//input[@id='Password']");
+    public static final Target INPUT_TEXT_PASSWORD = Target.the("Input texto password").locatedBy("//input[@id='Password']");
 
     //Input text: Confirm Password
     //input[@id='ConfirmPassword']
-    public static final Target INPUT_TEXT_CONFIRMAR_PASSWORD = Target.the("Input text confirmar password").locatedBy("//input[@id='ConfirmPassword']");
+    public static final Target INPUT_TEXT_CONFIRMAR_PASSWORD = Target.the("Input texto confirmar password").locatedBy("//input[@id='ConfirmPassword']");
 
     //Boton registrar:
     //input[@id='register-button' and @type="submit"]
