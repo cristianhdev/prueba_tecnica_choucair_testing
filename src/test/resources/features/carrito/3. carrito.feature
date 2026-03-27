@@ -15,9 +15,8 @@ Característica: Carrito de compra
   Antecedentes:Login usuario exitoso.
     Dado que el usuario se encuentra en la página del login
     Cuando ingrese las credenciales validas
-      | email                  | password |
-      | pruebaqa2016@gmail.com | $246810$ |
-
+      | email                | password |
+      | testqa2031@gmail.com | $1234%   |
 
 
   @CarritoCompras

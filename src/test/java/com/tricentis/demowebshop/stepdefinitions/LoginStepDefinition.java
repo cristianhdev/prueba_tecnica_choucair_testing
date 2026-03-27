@@ -54,7 +54,7 @@ public class LoginStepDefinition {
     public void seDebeAccederCorrectamenteASuCuenta() {
         usuario_login.should(
                 seeThat("Validando correo usuario logueado",ValidarEmail.onValidar(), equalTo(true)),
-                seeThat("Validar titulo pagina login usuario registrado",ValidarTexto.onValidar(LBL_LOGIN_VALIDACION), equalTo(mensajeValidacionLoginExitoso))
+                seeThat("Validar titulo página login usuario registrado",ValidarTexto.onValidar(LBL_LOGIN_VALIDACION), equalTo(mensajeValidacionLoginExitoso))
         );
     }
 }

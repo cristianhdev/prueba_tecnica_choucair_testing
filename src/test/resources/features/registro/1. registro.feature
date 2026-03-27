@@ -16,6 +16,6 @@
     Dado que el usuario se encuentra en la página de registro
     Cuando ingresa la información personal y sus credenciales de usuario
       | primerNombre | segundoNombre | email                | password | confirm |
-      | pedro        | sanchez       | testqa2030@gmail.com | $1234%   | $1234%  |
+      | pedro        | sanchez       | testqa2038@gmail.com | $12348%  | $12348% |
     Entonces se debe visualizar el mensaje de confirmación
 

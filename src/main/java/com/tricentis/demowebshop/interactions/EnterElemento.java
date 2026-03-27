@@ -1,8 +1,9 @@
 package com.tricentis.demowebshop.interactions;
 
+import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
-import net.serenitybdd.screenplay.Tasks;
+import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.targets.Target;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
@@ -21,8 +22,11 @@ public class EnterElemento implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
         try{
-            WaitUntil.the(this.elemento,isVisible()).forNoMoreThan(5).seconds();
-            elemento.resolveFor(actor).sendKeys(this.textoEntrada);
+            actor.attemptsTo(
+                    WaitUntil.the(this.elemento,isVisible()).forNoMoreThan(5).seconds(),
+                    Enter.theValue(this.textoEntrada).into(this.elemento)
+            );
+
         }catch (Exception e){
             System.out.println(e.getStackTrace());
         }
@@ -30,6 +34,6 @@ public class EnterElemento implements Interaction {
     }
 
     public static EnterElemento onCampo(Target elemento,String texto){
-        return Tasks.instrumented(EnterElemento.class,elemento,texto);
+        return Instrumented.instanceOf(EnterElemento.class).withProperties(elemento,texto);
     }
 }
