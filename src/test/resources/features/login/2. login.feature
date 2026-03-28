@@ -15,6 +15,6 @@ Característica: Login Usuario
     Dado que el usuario se encuentra en la página del login
     Cuando ingrese las credenciales validas
       | email                | password |
-      | testqa2031@gmail.com | $1234%   |
+      | testqa2040@gmail.com | $12348%  |
     Entonces se debe acceder correctamente a su cuenta
 

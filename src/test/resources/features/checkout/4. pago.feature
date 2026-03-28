@@ -14,7 +14,7 @@ Característica: Proceso de pago
   Antecedentes: Agregar productos al carrito
     Dado que el usuario se encuentra autenticado
       | email                | password |
-      | testqa2031@gmail.com | $1234%   |
+      | testqa2040@gmail.com | $12348%  |
     Cuando selecciona un producto y lo agregue al carrito
 
 
